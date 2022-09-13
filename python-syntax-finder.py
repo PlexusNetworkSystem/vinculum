@@ -6,3 +6,4 @@ def kontrol(dosya):
         return True
     except SyntaxError:
         return False
+#Created by https://github.com/datheia
