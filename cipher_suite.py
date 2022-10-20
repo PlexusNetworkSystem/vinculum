@@ -19,7 +19,7 @@ def affine_cipher(string, a, b):
 def text_to_binary(string):
     result = ""
     for char in string:
-        result += bin(ord(char))[2:].zfill(8)
+        result += " " + bin(ord(char))[2:].zfill(8)
     return result
 def binary_to_image(string):
     img = Image.new('RGB', (len(string), 1))
