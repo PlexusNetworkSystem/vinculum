@@ -1,0 +1,5 @@
+r=int(input("Enter the value of red: "))
+g=int(input("Enter the value of green: "))
+b=int(input("Enter the value of blue: "))
+print("ANSI->\t\t"+ r"\033[38;5;%sm"%(16+36*round(r/255*5)+6*round(g/255*5)+round(b/255*5)))
+print("DISPLAY->\t\033[38;5;%sm"%(16+36*round(r/255*5)+6*round(g/255*5)+round(b/255*5))+"aaaaaaa")
