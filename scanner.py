@@ -26,7 +26,7 @@ found = 0
 
 try: 
 	for port in range(1,65535):
-		sys.stdout.write("Trying port: " + str(port) + "\r")
+		sys.stdout.write("Scaning port: " + str(port) + "\r")
 		s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 		socket.setdefaulttimeout(1)
 		result = s.connect_ex((target,port)) #returns an error indicator
