@@ -14,7 +14,8 @@ if len(sys.argv) == 2:
 	target = socket.gethostbyname(sys.argv[1]) #Translate hostname to IPv4
 else: 
 	print(Fore.RED + "Invalid amount of arguments.")
-	print(Fore.YELLOW + "Syntax : python3 scanner.py <py>")
+	print(Fore.YELLOW + "Syntax : python3 scanner.py <ip>")
+	sys.exit()
 #Add a pretty banner
 start = timeit.default_timer()
 print("-" * 50)
@@ -25,6 +26,7 @@ found = 0
 
 try: 
 	for port in range(1,65535):
+		sys.stdout.write("Trying port: " + str(port) + "\r")
 		s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 		socket.setdefaulttimeout(1)
 		result = s.connect_ex((target,port)) #returns an error indicator
